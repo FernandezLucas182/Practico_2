@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("titulo", libro.getTitulo());
                 intent.putExtra("autor", libro.getAutor());
                 intent.putExtra("anio", libro.getAnio());
+                intent.putExtra("descripcion", libro.getDescripcion());
+                intent.putExtra("imagenId", libro.getImagenId());
                 startActivity(intent);
             } else {
                 binding.tvResultado.setText("Libro no encontrado.");

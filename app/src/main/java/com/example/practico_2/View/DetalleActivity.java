@@ -18,9 +18,16 @@ public class DetalleActivity extends AppCompatActivity {
         String titulo = getIntent().getStringExtra("titulo");
         String autor = getIntent().getStringExtra("autor");
         int anio = getIntent().getIntExtra("anio", 0);
+        String descripcion = getIntent().getStringExtra("descripcion");
+        int imagenId = getIntent().getIntExtra("imagenId", 0);
 
         binding.tvTitulo.setText(titulo);
         binding.tvAutor.setText(autor);
         binding.tvAnio.setText(String.valueOf(anio));
+        binding.txtDescripcion.setText(descripcion);
+        binding.imgPortadaLibro.setImageResource(imagenId);
+        binding.btnVolver.setOnClickListener(v -> {
+            finish();
+        });
     }
 }
